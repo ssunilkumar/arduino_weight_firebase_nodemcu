@@ -130,21 +130,21 @@ void setup()
 
 
 
-
+delay(10000);
 }
 
 void loop()
 {
-  delay(5000);
   data = s.parseInt();
   if(data>1)
   {
-    Firebase.pushFloat(firebaseData, "/LED_Status7", data);
+    Firebase.pushFloat(firebaseData, "/Weight_DATA1", data);
   }
   if(data<2)
   {
-    Firebase.pushFloat(firebaseData, "/Water_supply", data);
+    Firebase.pushFloat(firebaseData, "/Water_supply1", data);
   }
   Serial.println(data);
+  delay(30000);
   
 }
